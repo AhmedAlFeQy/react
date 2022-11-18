@@ -10,8 +10,8 @@ pipeline {
               sh """
         
                   docker login -u ${username} -p ${password}
-                  docker build -t ahmedalfeqy/vfbakehouse:${BUILD_NUMBER} .
-                  docker push ahmedalfeqy/vfbakehouse:${BUILD_NUMBER}
+                  docker build -t ahmedalfeqy/dashboard .
+                  docker push ahmedalfeqy/dashboard
               """
           }
         } 
