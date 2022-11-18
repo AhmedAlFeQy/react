@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bakehouse
-  name: bakehouse
+    app: dashboard
+  name: dashboard
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bakehouse
+      app: dashboard
   template:
     metadata:
       labels:
-        app: bakehouse
+        app: dashboard
     spec:
       containers:
-      - image: kareemelkasaby/vfbakehouse:${BUILD_NUMBER}
-        name: bakehouse
+      - image: ahmedalfeqy/dashboard:latest
+        name: dashboard
         imagePullPolicy: Always
         ports:
         - containerPort: 80
